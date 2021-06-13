@@ -242,6 +242,14 @@ end
 
 function prime()
 
+
+
+@btime computeSod1D(198, 0);
+@btime computeSod1D(198, 1);
+@btime computeSod1D(198, 2);
+@btime computeSod1D(198, 3); 
+
+
 @time x1, theorySolution = computeExactSod1D(198);
 @time x2, RoeSolution = computeSod1D(198, 0);
 @time x3, AUSMplusSolution = computeSod1D(198, 1);

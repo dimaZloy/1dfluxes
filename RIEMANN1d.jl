@@ -309,7 +309,7 @@ end
 
 	flux = zeros(Float64,4);
 
-	for i=1:NCells-1
+	@simd for i=1:NCells-1
 	   rhoL = UPHSCELLS[i,1];
 	   uL = UPHSCELLS[i,2];
    	   pL = UPHSCELLS[i,3];	

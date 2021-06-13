@@ -188,7 +188,7 @@ end
 		nVar = size(UPHSCELLS,2);
 		FLUXES = zeros(Float64,N,nVar+1);
 
-		for i = 1:N-1
+		@simd for i = 1:N-1
 		
 			phsLeft[1] = UPHSCELLS[i,1];
 			phsLeft[2] = UPHSCELLS[i,2];
@@ -224,7 +224,7 @@ end
 		nVar = size(UPHSCELLS,2);
 		FLUXES = zeros(Float64,N,nVar+1);
 
-		for i = 1:N-1
+		@simd for i = 1:N-1
 		
 			phsLeft[1] = UPHSCELLS[i,1];
 			phsLeft[2] = UPHSCELLS[i,2];
@@ -260,7 +260,7 @@ end
 		nVar = size(UPHSCELLS,2);
 		FLUXES = zeros(Float64,N,nVar+1);
 
-		for i = 1:N-1
+		@simd for i = 1:N-1
 		
 			phsLeft[1] = UPHSCELLS[i,1];
 			phsLeft[2] = UPHSCELLS[i,2];

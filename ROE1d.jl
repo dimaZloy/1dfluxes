@@ -122,7 +122,7 @@ function ROE1d(UPHSCELLS::Array{Float64,2}, Gamma::Float64)::Array{Float64,2}
 		nVar = size(UPHSCELLS,2);
 		FLUXES = zeros(N,nVar+1);
 
-		for i = 1:N
+		@simd for i = 1:N-1
 		
 			consLeft[0+1] = UCONSCELLS[i,1];
 			consLeft[1+1] = UCONSCELLS[i,2];
