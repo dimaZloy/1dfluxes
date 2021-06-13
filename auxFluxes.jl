@@ -16,8 +16,21 @@ end
 
 
 
+@inline function phs2cnsFlux3(APhys::Array{Float64,1},gamma::Float64)::Array{Float64,1}
 
-@inline function phs2cnsFlux(APhys::Array{Float64,2},gamma::Float64)::Array{Float64,2}
+ACons = zeros(Float64,4);
+
+
+	ACons[1] = APhys[1];
+	ACons[2] = APhys[1]*APhys[2];
+	ACons[3] = APhys[3]/(gamma-1.0) + 0.5*APhys[1]*( APhys[2]*APhys[2] );
+
+return ACons;
+
+end
+
+
+@inline function phs2cnsFlux4(APhys::Array{Float64,2},gamma::Float64)::Array{Float64,2}
 
 N = size(APhys,1);
 ACons = zeros(Float64,N,4);

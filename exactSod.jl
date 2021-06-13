@@ -130,7 +130,7 @@ end
 
 function computeExactSod1D(N::Int64)
 
-	println("Computing 1D Sod exact solution  ");
+	#println("Computing 1D Sod exact solution  ");
 
 	nVar::Int64 = 3;
 	xFirst::Float64 = 0.0;
